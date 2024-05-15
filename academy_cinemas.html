@@ -122,9 +122,6 @@
                     </div>
                 </div>
 
-
-
-
                 <div class="col-sm">
                     <div class="card" style="width: 20rem;">
                         <img class="card-img-top" src="./Img/kongskullisland.jpg" alt="Kong Skull Island" style="height: 13rem;">
@@ -145,22 +142,82 @@
 
             </div>
         </div>
-
-
-
-
         <!--/Showtimes-->
 
+        <!--jumbotron heading-->
+        <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+            <div class="container">
+                <h1 class="display-4 hidden-sm-down" style="color:#fff;font-family:roboto;font-weight:900;text-transform:uppercase;">
+                Movie Deals</h1>
+                <p class="lead">Check out our monthly deals...</p>
+                <!--Movie deals-->
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#register">
+                    See our monthly movie deals!
+                </button>
+                <!--/movie deals-->
+            </div>
+        </div>
+        <!--/jumbotron heading
+        -->
+
         <!--Rewards section-->
-        <div class="text-center">
-            <form id="deals">
-                <h1 class="text-primary my-5">Sign up to Movie Club Rewards!</h1>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        <div class="row">
+            <div class="container text-center col-md-6" id="deals">
+                <div class="container text-center">
+                <h1 class="display-5 my-4 col-lg-auto text-primary">Sign up to Movie Club Rewards!</h1>
+                <div class="input-group mb-5 input-group-sm">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Enter email">
+                <span class="input-group-btn">
+                <button type="button" class="btn btn-secondary btn-info popover-dismiss" data-bs-container="body" data-bs-toggle="popover"
+                    data-bs-placement="top" data-bs-content="Submit your email to receive great movie Rewards!">Submit</button>
+            </span>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <!--form modal-->
+        <div class="modal" tabindex="-1" id="register">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Register to receive movie deals!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <form>
+                            <fieldset class="form-group">
+                                <label for="firstname">First Name: </label>
+                                <input type="text" class="form-control" id="firstname" placeholder="First Name...">
+                            </fieldset> 
+
+                            <fieldset class="form-group">
+                                <label for="lastname">Last Name: </label>
+                                <input type="text" class="form-control" id="lastname" placeholder="Last Name...">
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <label for="email">Email: </label>
+                                <input type="text" class="form-control" id="email" placeholder="Email...">
+                            </fieldset>
+
+                            <fieldset class="form-group">
+                                <label for="password">Password: </label>
+                                <input type="password" class="form-control" id="password" placeholder="Password..."
+                                data-toggle="tool-tip" title="Passwords are case sensitive.">
+                            </fieldset>
+                        </form>
+                        </div>
+                        <div class="model-footer">
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </div>
+        </div>
+        <!--/form modal-->
 
             <!--footer-->
 
@@ -179,26 +236,8 @@
                         <small class="nav-link ">&copy; 2019 Academy Cinemas&reg;</small>
                     </li>
                 </ul>
-
-
-
-
             </div>
-
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
-
     </div>
 
     <!-- Optional JavaScript -->
@@ -212,6 +251,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-</body>
+
+    <script>const popover = new bootstrap.Popover('.popover-dismiss', {
+        trigger: 'focus'
+    })
+    
+    </script>
+    </body>
 
 </html>
